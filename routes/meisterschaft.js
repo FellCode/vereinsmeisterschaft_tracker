@@ -4,7 +4,7 @@ var Meisterschaft = require('../models/meisterschaft');
 
 
 router.get('/', function(req, res) {
-	Meisterschaft.findById('5b07cc5e3ecfa2001452b441').populate('ergebnisse').exec(function(err,meisterschaft){
+	Meisterschaft.findOne({}).populate('ergebnisse').exec(function(err,meisterschaft){
 		
 		if(err){
 			// eslint-disable-next-line no-console
