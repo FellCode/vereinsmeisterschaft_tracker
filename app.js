@@ -17,7 +17,8 @@ var resultRoutes = require('./routes/result');
 
 
 //DATABASE CONNECTION
-mongoose.connect(process.env.DATABASE_URL);
+//mongoose.connect(process.env.DATABASE_URL);
+mongoose.connect('mongodb://FellCode:Bonjovi3!@ds235180.mlab.com:35180/vereinsmeisterschaft');
 //SETTINGS
 app.use(bodyParser.urlencoded({extended:true}));
 app.set('view engine', 'ejs');
