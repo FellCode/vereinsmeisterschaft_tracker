@@ -1,0 +1,85 @@
+<% include ../partials/header %>
+
+<div class="ui container">
+    <div id="content">
+        <form style="width:30%;margin:20px auto;" class="ui form" action="/teilnehmer" method="POST">
+            <h1 class="ui header">Teilnehmer</h1>
+            <div class="field">
+                <label>Name</label>
+                <input name="teilnehmer[name]" placeholder="Name" type="text">
+            </div>
+            <div class="field">
+                <label>Geburtstag</label>
+                <input type="date" placeholder="Date" name="teilnehmer[birthdate]">
+            </div>
+            <h4 class="ui header">Luftgewehr</h4>
+            <div class="ui segment">
+                <div class="field">
+                    <div class="ui toggle checkbox">
+                        <input name="teilnehmer[disciplines]" type="checkbox" value="LSF">
+                        <label>LG - Stehend Freihand</label>
+                    </div>
+                    <div class="ui toggle checkbox">
+                        <input name="teilnehmer[disciplines]" type="checkbox" value="LSA">
+                        <label>LG - Stehend Aufgelegt</label>
+                    </div>
+                    <div class="ui toggle checkbox">
+                        <input name="teilnehmer[disciplines]" type="checkbox" value="LS">
+                        <label>LG - Sitzend</label>
+                    </div>
+                </div>
+            </div>
+            <h4 class="ui header">Kleinkaliber</h4>
+            <div class="ui segment">
+                <div class="field">
+                    <div class="ui toggle checkbox">
+                        <input name="teilnehmer[disciplines]" type="checkbox" value="KOM">
+                        <label>KK - Olympisch Match</label>
+                    </div>
+                    <div class="ui toggle checkbox">
+                        <input name="teilnehmer[disciplines]" type="checkbox" value="KSA">
+                        <label>KK - Stehend Aufgelegt</label>
+                    </div>
+                    <div class="ui toggle checkbox">
+                        <input name="teilnehmer[disciplines]" type="checkbox" value="KS">
+                        <label>KK - Sitzend</label>
+                    </div>
+                </div>
+            </div>
+            <h4 class="ui header">Pistole</h4>
+            <div class="ui segment">
+                <div class="field">
+                    <div class="ui toggle checkbox">
+                        <input name="teilnehmer[disciplines]" type="checkbox" value="SP">
+                        <label>Sportpistole</label>
+                    </div>
+                    <div class="ui toggle checkbox">
+                        <input name="teilnehmer[disciplines]" type="checkbox" value="FP">
+                        <label>Freie Pistole</label>
+                    </div>
+                    <div class="ui toggle checkbox">
+                        <input name="teilnehmer[disciplines]" type="checkbox" value="LP">
+                        <label>Luftpistole</label>
+                    </div>
+                </div>
+            </div>
+            <h4 class="ui header">Spaßschießen</h4>
+            <div class="ui segment">
+                <div class="field">
+                    <div class="ui toggle checkbox">
+                        <input name="teilnehmer[disciplines]" type="checkbox" value="SS">
+                        <label>Spaßschießen</label>
+                    </div>
+                </div>
+            </div>
+            <button class="ui button" type="submit">Absenden</button>
+            <a href="/teilnehmer" class="ui button">Abbrechen</a>
+        </form>
+    </div>
+</div>
+
+
+<% include ../partials/footer %>
+
+
+

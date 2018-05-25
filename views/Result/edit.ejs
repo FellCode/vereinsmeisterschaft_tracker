@@ -1,0 +1,30 @@
+<h1>EDIT EJS for <%= result.nameSchuetze  %></h1>
+
+
+<% include ../partials/header %>
+
+<div class="ui container">
+    <div id="content">
+        <form style="width:30%;margin:20px auto;" class="ui form" action="/result/<%= result._id %>?_method=PUT" method="POST" >
+            <h1 class="ui header">Ergebnis von <%=result.nameSchuetze%> bearbeiten</h1>
+            <div class="field disabled">
+                <label>Teilnehmer Nummer</label>
+                <input name="result[nummerSchuetze]" placeholder="Nummer" type="text" value="<%=result.nummerSchuetze%>">
+            </div>
+            <div class="field">
+                <label>Ringe</label>
+                <input name="result[ringeSchuetze]" placeholder="Ringe" type="text" value="<%=result.ringeSchuetze%>">
+            </div>
+            <div class="field">
+                <label>Teiler</label>
+                <input name="result[teilerSchuetze]" placeholder="Ringe" type="text" value="<%=result.teilerSchuetze%>">
+            </div>
+            
+            <button class="ui green basic button" type="submit">Bestätigen</button>
+            <a href="/teilnehmer" class="ui button basic">Abbrechen</a>
+        </form>
+    </div>
+</div>
+
+
+<% include ../partials/footer %>

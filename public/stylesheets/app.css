@@ -1,0 +1,134 @@
+i{
+    margin-right: 5px;
+}
+
+.ui.inverted.menu{
+    background: #1f7a1f;
+}
+
+.ui.container{
+    padding-left:5px;
+    padding-right:5px;
+}
+
+#content{
+    padding-top:60px;
+}
+|
+.ui.list .list > .item .header, .ui.list > .item .header{
+    font-size:1.3em;
+    margin:5px;
+}
+
+.avatar{
+    border-radius:50%;
+}
+form{
+    margin-top:5px;
+}
+
+.deleteForm{
+    display: inline;
+}
+
+.ui.green.button{
+    background: #1f7a1f;
+}
+
+.ui.menu .item{
+    transition: background .2s ease,box-shadow .2s ease,color .12s ease,-webkit-box-shadow .2s ease;
+    color:white;
+}
+
+
+.ui.secondary.pointing.menu .item.tablinks:hover{
+    color:white;
+}
+
+.ui.secondary.pointing.menu{
+    font-size: 1.2em;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.58);
+}
+
+.ui.secondary.pointing.menu .item:hover{
+    transition: transform 0.5s ease;
+    transform: scale(1.1);
+    border-bottom-color: #1f7a1f;
+}
+
+.ui.secondary.pointing.menu .item.active{
+    color:white;
+    border-bottom-color: #1f7a1f;
+
+}
+.ui.secondary.pointing.menu .item.active:hover{
+    color:white;
+    border-bottom-color: #1f7a1f;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-bottom:1px solid #ccc;
+}
+
+.ui.toggle.checkbox{
+    margin-top:5px;
+    margin-right:3px;
+}
+
+#addTeilnehmer{
+    margin-bottom: 30px;
+}
+
+#searchResultDiv{
+    display:none;
+}
+.tabcontent2{
+    border:2px solid rgba(211,211,211,.2);
+    border-radius: 15px;
+    padding: 15px;
+    background-color: rgba(211,211,211,.2);
+}
+
+.ui.search.category{
+    margin-bottom: 10px;
+}
+
+tr:hover{
+    cursor: pointer;
+}
+
+.ui.dividing.header{
+    color:white;
+}
+
+body{
+background: #485563;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+background-attachment:fixed;
+}
+
+.ui.sortable.striped.selectable.celled.table  th{
+    color:green;
+}
+
+#head{
+    text-align: center;
+}
+
+.ui.items > .item > .content > .header:not(.ui){
+    color:white;
+}
+.ui.items > .item > .content > .description:not(.ui){
+    color:white;
+}
+
+.ui.inverted.segment, .ui.primary.inverted.segment{
+    background: rgba(0,0,0,0);    
+}
+.ui.divided.items > .item{
+    border-top: 1px solid rgb(31,122,31,.2);
+}
