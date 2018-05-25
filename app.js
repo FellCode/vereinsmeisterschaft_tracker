@@ -13,7 +13,7 @@ var meisterschaftRoutes = require('./routes/meisterschaft');
 var resultRoutes = require('./routes/result');
 //UTILS
 
-
+dbUtils.createMeisterschaft();
 
 
 //DATABASE CONNECTION
