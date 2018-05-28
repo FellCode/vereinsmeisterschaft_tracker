@@ -16,6 +16,7 @@ var resultRoutes = require('./routes/result');
 
 
 //DATABASE CONNECTION
+console.log(process.env.DATABASE_URL);
 mongoose.connect(process.env.DATABASE_URL);
 //SETTINGS
 app.use(bodyParser.urlencoded({extended:true}));

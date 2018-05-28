@@ -3,7 +3,7 @@
 <div class="ui container">
     <div id="content">
         <form style="width:30%;margin:20px auto;" class="ui form" action="/teilnehmer/<%= teilnehmer._id %>?_method=PUT" method="POST" >
-            <h1 class="ui header"><%=teilnehmer.name%> bearbeiten</h1>
+            <h1 class="ui dividing header"><%=teilnehmer.name%> bearbeiten</h1>
             <div class="field">
                 <label>Name</label>
                 <input name="teilnehmer[name]" placeholder="Name" type="text" value="<%=teilnehmer.name%>">
@@ -13,7 +13,7 @@
                 <input type="date" placeholder="Date" name="teilnehmer[birthdate]" value="<%=moment(teilnehmer.birthdate).format('YYYY-MM-DD')%>">
             </div>
             <button class="ui green basic button" type="submit">Absenden</button>
-            <a href="/teilnehmer" class="ui button basic">Abbrechen</a>
+            <a href="/teilnehmer" class="ui inverted button basic">Abbrechen</a>
         </form>
         <form class="deleteForm" action="/teilnehmer/<%= teilnehmer._id %>?_method=DELETE" method="POST">
             <button class="ui red basic button">Löschen</button>

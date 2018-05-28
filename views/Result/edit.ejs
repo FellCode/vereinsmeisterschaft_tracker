@@ -6,7 +6,7 @@
 <div class="ui container">
     <div id="content">
         <form style="width:30%;margin:20px auto;" class="ui form" action="/result/<%= result._id %>?_method=PUT" method="POST" >
-            <h1 class="ui header">Ergebnis von <%=result.nameSchuetze%> bearbeiten</h1>
+            <h1 class="ui dividing header">Ergebnis von <%=result.nameSchuetze%> bearbeiten</h1>
             <div class="field disabled">
                 <label>Teilnehmer Nummer</label>
                 <input name="result[nummerSchuetze]" placeholder="Nummer" type="text" value="<%=result.nummerSchuetze%>">
@@ -21,7 +21,7 @@
             </div>
             
             <button class="ui green basic button" type="submit">Bestätigen</button>
-            <a href="/teilnehmer" class="ui button basic">Abbrechen</a>
+            <a href="/teilnehmer" class="ui inverted button basic">Abbrechen</a>
         </form>
     </div>
 </div>

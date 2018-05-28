@@ -20,6 +20,10 @@ i{
     margin:5px;
 }
 
+.ui.form .field > label{
+    color:white;
+}
+
 .avatar{
     border-radius:50%;
 }
