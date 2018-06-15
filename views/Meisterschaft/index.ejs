@@ -104,7 +104,7 @@
 		          </tr>
 		        </thead>
 		        <tbody>
-		        	<% meisterschaft.ergebnisse.filter(filter,{abk:"LSF",minAlter:21,maxAlter:43}).sort(sortRanking).forEach(function(ergebnis,index){ %>
+		        	<% meisterschaft.ergebnisse.filter(filter,{abk:"LSF",minAlter:21,maxAlter:44}).sort(sortRanking).forEach(function(ergebnis,index){ %>
 					        	<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
 						          	 <td><%= index+1 %></td>
 						            <td><%=ergebnis.nummerSchuetze %></td>
@@ -127,7 +127,7 @@
 		          </tr>
 		        </thead>
 		        <tbody>
-		        	<% meisterschaft.ergebnisse.filter(filter,{abk:"LSF",minAlter:44,maxAlter:59}).sort(sortRanking).forEach(function(ergebnis,index){ %>
+		        	<% meisterschaft.ergebnisse.filter(filter,{abk:"LSF",minAlter:45,maxAlter:59}).sort(sortRanking).forEach(function(ergebnis,index){ %>
 					        	<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
 						          	 <td><%= index+1 %></td>
 						            <td><%=ergebnis.nummerSchuetze %></td>
