@@ -44,6 +44,8 @@ function MapDisciplinNames(abk){
 		return 'Spaßschießen';
 	if(abk=== 'LP')
 		return 'Luftpistole';
+	if(abk=== 'LPA')
+		return 'Luftpistole Aufgelegt';
 	if(abk=== 'FP')
 		return 'Freie Pistole';
 	if(abk=== 'SP')

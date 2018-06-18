@@ -922,75 +922,112 @@
 		</div>
 	<!-- PISTOLE -->
 	    <div id="pistole" class="tabcontent">
-	    		<h3 class="ui dividing header">Luftpistole</h3>
-	    		<table class="ui sortable striped selectable celled table">
-		        <thead>
-		          <tr>
-		          	<th>Position</th>
-		            <th>Nummer</th>
-		            <th>Name</th>
-		            <th>Ergebnis</th>
-		            <th>Teiler</th>
-		          </tr>
-		        </thead>
-		        <tbody>
-		        	<% meisterschaft.ergebnisse.filter(filter,{abk:"LP",minAlter:0,maxAlter:999}).sort(sortRanking).forEach(function(ergebnis,index){ %>
-					        	<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
-						          	 <td><%= index+1 %></td>
-						            <td><%=ergebnis.nummerSchuetze %></td>
-						            <td><%=ergebnis.nameSchuetze %></td>
-						            <td><%=ergebnis.ringeSchuetze %></td>
-						            <td><%=ergebnis.teilerSchuetze %></td>
-					          	</tr>
-		      		<% }) %>
-		      	</tbody>
-		    </table>
-		    <h3 class="ui dividing header">Freie Pistole</h3>
-	    		<table class="ui sortable striped selectable celled table">
-		        <thead>
-		          <tr>
-		          	<th>Position</th>
-		            <th>Nummer</th>
-		            <th>Name</th>
-		            <th>Ergebnis</th>
-		            <th>Teiler</th>
-		          </tr>
-		        </thead>
-		        <tbody>
-		        	<% meisterschaft.ergebnisse.filter(filter,{abk:"FP",minAlter:0,maxAlter:999}).sort(sortRanking).forEach(function(ergebnis,index){ %>
-					        	<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
-						          	 <td><%= index+1 %></td>
-						            <td><%=ergebnis.nummerSchuetze %></td>
-						            <td><%=ergebnis.nameSchuetze %></td>
-						            <td><%=ergebnis.ringeSchuetze %></td>
-						            <td><%=ergebnis.teilerSchuetze %></td>
-					          	</tr>
-		      		<% }) %>
-		      	</tbody>
-		    </table>
-		    <h3 class="ui dividing header">Sportpistole</h3>
-	    		<table class="ui sortable striped selectable celled table">
-		        <thead>
-		          <tr>
-		          	<th>Position</th>
-		            <th>Nummer</th>
-		            <th>Name</th>
-		            <th>Ergebnis</th>
-		            <th>Teiler</th>
-		          </tr>
-		        </thead>
-		        <tbody>
-		        	<% meisterschaft.ergebnisse.filter(filter,{abk:"SP",minAlter:0,maxAlter:999}).sort(sortRanking).forEach(function(ergebnis,index){ %>
-					        	<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
-						          	 <td><%= index+1 %></td>
-						            <td><%=ergebnis.nummerSchuetze %></td>
-						            <td><%=ergebnis.nameSchuetze %></td>
-						            <td><%=ergebnis.ringeSchuetze %></td>
-						            <td><%=ergebnis.teilerSchuetze %></td>
-					          	</tr>
-		      		<% }) %>
-		      	</tbody>
-		    </table>
+	    	<div class="ui secondary pointing menu">
+	            <a class="item active tablinks" id="defaultOpen" onclick="openTab(event, 'luftpistole','tabcontent2')">Luftpistole</a>
+	            <a class="item tablinks" onclick="openTab(event, 'luftpistoleAufgelegt','tabcontent2')">Luftpistole Aufgelegt</a>
+	            <a class="item tablinks" onclick="openTab(event, 'sportpistole','tabcontent2')">Sportpistole</a>
+	            <a class="item tablinks" onclick="openTab(event, 'freiepistole','tabcontent2')">Freie Pistole</a>
+	    	</div>
+	    		<div id="luftpistole" class="tabcontent2">
+		    		<h3 class="ui dividing header">Luftpistole</h3>
+		    		<table class="ui sortable striped selectable celled table">
+			        <thead>
+			          <tr>
+			          	<th>Position</th>
+			            <th>Nummer</th>
+			            <th>Name</th>
+			            <th>Ergebnis</th>
+			            <th>Teiler</th>
+			          </tr>
+			        </thead>
+			        <tbody>
+			        	<% meisterschaft.ergebnisse.filter(filter,{abk:"LP",minAlter:0,maxAlter:999}).sort(sortRanking).forEach(function(ergebnis,index){ %>
+						        	<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
+							          	 <td><%= index+1 %></td>
+							            <td><%=ergebnis.nummerSchuetze %></td>
+							            <td><%=ergebnis.nameSchuetze %></td>
+							            <td><%=ergebnis.ringeSchuetze %></td>
+							            <td><%=ergebnis.teilerSchuetze %></td>
+						          	</tr>
+			      		<% }) %>
+			      	</tbody>
+			    </table>
+			</div>
+			<div id="luftpistoleAufgelegt" class="tabcontent2">
+		    		<h3 class="ui dividing header">Luftpistole Aufgelegt</h3>
+		    		<table class="ui sortable striped selectable celled table">
+			        <thead>
+			          <tr>
+			          	<th>Position</th>
+			            <th>Nummer</th>
+			            <th>Name</th>
+			            <th>Ergebnis</th>
+			            <th>Teiler</th>
+			          </tr>
+			        </thead>
+			        <tbody>
+			        	<% meisterschaft.ergebnisse.filter(filter,{abk:"LPA",minAlter:0,maxAlter:999}).sort(sortRanking).forEach(function(ergebnis,index){ %>
+						        	<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
+							          	 <td><%= index+1 %></td>
+							            <td><%=ergebnis.nummerSchuetze %></td>
+							            <td><%=ergebnis.nameSchuetze %></td>
+							            <td><%=ergebnis.ringeSchuetze %></td>
+							            <td><%=ergebnis.teilerSchuetze %></td>
+						          	</tr>
+			      		<% }) %>
+			      	</tbody>
+			    </table>
+			</div>
+			<div id="freiepistole" class="tabcontent2">
+			    <h3 class="ui dividing header">Freie Pistole</h3>
+		    		<table class="ui sortable striped selectable celled table">
+			        <thead>
+			          <tr>
+			          	<th>Position</th>
+			            <th>Nummer</th>
+			            <th>Name</th>
+			            <th>Ergebnis</th>
+			            <th>Teiler</th>
+			          </tr>
+			        </thead>
+			        <tbody>
+			        	<% meisterschaft.ergebnisse.filter(filter,{abk:"FP",minAlter:0,maxAlter:999}).sort(sortRanking).forEach(function(ergebnis,index){ %>
+						        	<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
+							          	 <td><%= index+1 %></td>
+							            <td><%=ergebnis.nummerSchuetze %></td>
+							            <td><%=ergebnis.nameSchuetze %></td>
+							            <td><%=ergebnis.ringeSchuetze %></td>
+							            <td><%=ergebnis.teilerSchuetze %></td>
+						          	</tr>
+			      		<% }) %>
+			      	</tbody>
+			    </table>
+			</div>
+			<div id="sportpistole" class="tabcontent2">
+			    <h3 class="ui dividing header">Sportpistole</h3>
+		    		<table class="ui sortable striped selectable celled table">
+			        <thead>
+			          <tr>
+			          	<th>Position</th>
+			            <th>Nummer</th>
+			            <th>Name</th>
+			            <th>Ergebnis</th>
+			            <th>Teiler</th>
+			          </tr>
+			        </thead>
+			        <tbody>
+			        	<% meisterschaft.ergebnisse.filter(filter,{abk:"SP",minAlter:0,maxAlter:999}).sort(sortRanking).forEach(function(ergebnis,index){ %>
+						        	<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
+							          	 <td><%= index+1 %></td>
+							            <td><%=ergebnis.nummerSchuetze %></td>
+							            <td><%=ergebnis.nameSchuetze %></td>
+							            <td><%=ergebnis.ringeSchuetze %></td>
+							            <td><%=ergebnis.teilerSchuetze %></td>
+						          	</tr>
+			      		<% }) %>
+			      	</tbody>
+			    </table>
+			</div>
 	    </div>
 	<!-- ZIMMERSTUTZEN -->
 	    <div id="zimmerstutzen" class="tabcontent">
