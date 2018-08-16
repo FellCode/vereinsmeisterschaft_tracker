@@ -17,8 +17,7 @@ var resultRoutes = require('./routes/result');
 
 //DATABASE CONNECTION
 //Localhost: mongodb://localhost/vereinsmeisterschaft
-console.log(process.env.DATABASE_URL);
-mongoose.connect(process.env.DATABASE_URL);
+mongoose.connect("mongodb://localhost/vereinsmeisterschaft");
 //SETTINGS
 app.use(bodyParser.urlencoded({extended:true}));
 app.set('view engine', 'ejs');
