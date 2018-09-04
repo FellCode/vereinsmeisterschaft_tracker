@@ -20,7 +20,7 @@ var resultRoutes = require('./routes/result');
 
 //DATABASE CONNECTION
 //Localhost: mongodb://localhost/vereinsmeisterschaft
-mongoose.connect(process.env._DATABASE_URL
+mongoose.connect(process.env._DATABASE_URL);
 
 
 //SETTINGS
