@@ -1,0 +1,19 @@
+<% include partials/header %>
+
+
+<div class="ui container">
+    <div id="content">
+		<form style="width:30%;margin:20px auto;" class="ui form" method="POST" action="/login">
+			<h1>Login</h1>
+			
+			
+			<div class="field">
+                <label>Username</label>
+                <input type="date" placeholder="Date" name="teilnehmer[birthdate]">
+            </div>
+		    <input type="text" name="username" placeholder="Username">
+		    <input type="password" name="password" placeholder="Password">
+		    <button>Login</button>
+		</form>
+
+<% include partials/footer %>
