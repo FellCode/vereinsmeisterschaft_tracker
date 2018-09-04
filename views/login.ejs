@@ -4,16 +4,17 @@
 <div class="ui container">
     <div id="content">
 		<form style="width:30%;margin:20px auto;" class="ui form" method="POST" action="/login">
-			<h1>Login</h1>
-			
-			
+			<h1 class="ui dividing header">Login</h1>
 			<div class="field">
                 <label>Username</label>
-                <input type="date" placeholder="Date" name="teilnehmer[birthdate]">
+                <input type="text" placeholder="Username" name="username">
             </div>
-		    <input type="text" name="username" placeholder="Username">
-		    <input type="password" name="password" placeholder="Password">
-		    <button>Login</button>
+            <div class="field">
+                <label>Passwort:</label>
+                <input type="password" placeholder="Passwort" name="password">
+            </div>
+			<button class="ui button">Login</button>
 		</form>
-
+	</div>
+</div>
 <% include partials/footer %>
