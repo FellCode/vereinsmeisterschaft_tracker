@@ -34,7 +34,6 @@
 	            <a class="item tablinks" onclick="openTab(event, 'kleinkaliber','tabcontent')">Kleinkaliber</a>
 	            <a class="item tablinks" onclick="openTab(event, 'pistole','tabcontent')">Pistole</a>
 	            <a class="item tablinks" onclick="openTab(event, 'zimmerstutzen','tabcontent')">Zimmerstutzen</a>
-	            <a class="item tablinks" onclick="openTab(event, 'spassschiessen','tabcontent')">Spaßschießen</a>
 	    </div>
 		<!-- LUFTGEWEHR -->
 	    <div id="luftgewehr" class="tabcontent">
@@ -1167,31 +1166,6 @@
 		      			<% }) %>
 		      		</tbody>
 		      </table>
-	    </div>
-	<!-- SPAßSCHIEßEN -->
-		<div id="spassschiessen" class="tabcontent">
-		    <table class="ui sortable striped selectable celled table">
-		    	<thead>
-		        	<tr>
-			          	<th>Position</th>
-			            <th>Nummer</th>
-			            <th>Name</th>
-			            <th>Ergebnis</th>
-			            <th>Teiler</th>
-		        	</tr>
-		        </thead>
-		        <tbody>
-		        	<% meisterschaft.ergebnisse.filter(filter,{abk:"SS",minAlter:0,maxAlter:999}).sort(sortRanking).forEach(function(ergebnis,index){ %>
-						<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
-						     <td><%= index+1 %></td>
-							<td><%=ergebnis.nummerSchuetze %></td>
-							<td><%=ergebnis.nameSchuetze %></td>
-							<td><%=ergebnis.ringeSchuetze %></td>
-							<td><%=ergebnis.teilerSchuetze %></td>
-						</tr>
-		      		<% }) %>
-		      	</tbody>
-			</table>
 	    </div>
 	</div>
 </div>
