@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var Meisterschaft = require('../models/meisterschaft');
+var middleware = require('../middleware');
 
 
-router.get('/', function(req, res) {
+router.get('/',middleware.isLoggedIn, function(req, res) {
 	Meisterschaft.findOne({}).populate('ergebnisse').exec(function(err,meisterschaft){
 		
 		if(err){
