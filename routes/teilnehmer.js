@@ -4,9 +4,9 @@ var Teilnehmer = require('../models/teilnehmer');
 var moment = require('moment');
 var Meisterschaft = require('../models/meisterschaft');
 var Result = require('../models/result');
-var async = require('async');
+var middleware = require("../middleware");
 
-router.get('/', function(req,res){
+router.get('/',middleware.isLoggedIn, function(req,res){
 	Teilnehmer.find({},function(err,teilnehmer){
 		if(err){
 			// eslint-disable-next-line no-console 
@@ -17,7 +17,7 @@ router.get('/', function(req,res){
 	}); 
 });
 
-router.post('/', function(req,res){
+router.post('/',middleware.isLoggedIn, function(req,res){
 	
 	Teilnehmer.create(req.body.teilnehmer,function(err,teilnehmer){
 		if(err){
@@ -50,27 +50,21 @@ router.post('/', function(req,res){
 	});
 });
 
-router.get('/:id/edit',function(req, res) {
+router.get('/:id/edit',middleware.isLoggedIn,function(req, res) {
 	Teilnehmer.findById(req.params.id, function(err,foundTeilnehmer){
 		res.render('Teilnehmer/edit', {teilnehmer: foundTeilnehmer,moment:moment});
 	});
 });
 
-router.get('/new',function(req, res) {
+router.get('/new',middleware.isLoggedIn,function(req, res) {
 	res.render('Teilnehmer/new');
 });
 
-router.delete('/:id',function(req,res){
+router.delete('/:id',middleware.isLoggedIn,function(req,res){
 	Teilnehmer.findByIdAndRemove(req.params.id,function(err){
 		if(err){
 			res.redirect('back');
 		} else{
-		//	Result.find({},function(err,results){
-		//		results.forEach(function(result){
-		//			result.remove().exec();
-		//		})
-		//		Result.save();
-		//	})
 		Result.remove({teilnehmerID:req.params.id}, function(err) {
     		if (!err){ 
         		console.log("All Good");
@@ -81,7 +75,7 @@ router.delete('/:id',function(req,res){
 	});
 });
 
-router.put('/:id', function(req,res){
+router.put('/:id',middleware.isLoggedIn, function(req,res){
 	Teilnehmer.findByIdAndUpdate(req.params.id,req.body.teilnehmer, function(err){
 		if(err){
 			res.redirect('/teilnehmer');
