@@ -7,6 +7,7 @@ var methodOverride = require('method-override');
 var passport = require('passport');
 var LocalStrategy = require('passport-local');
 var dbUtils = require ('./dbUtils.js');
+require('dotenv').config();
 
 //MODELS
 var User = require('./models/user');
@@ -19,8 +20,9 @@ var resultRoutes = require('./routes/result');
 
 
 //DATABASE CONNECTION
+//Production: process.env._DATABASE_URL
 //Localhost: mongodb://localhost/vereinsmeisterschaft
-mongoose.connect(process.env._DATABASE_URL);
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-6qd5o.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`);
 
 
 //SETTINGS
@@ -45,6 +47,8 @@ app.use(function(req,res,next){
     res.locals.currentUser = req.user;
     next();
 });
+
+//dbUtils.createMeisterschaft();
 
 
 //ROUTES
