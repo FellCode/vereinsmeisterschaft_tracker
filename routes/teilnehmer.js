@@ -23,7 +23,7 @@ router.post('/',middleware.isLoggedIn, function(req,res){
 		if(err){
 			res.back();
 		}else{
-			Meisterschaft.findOne({jahr:'2018'}, function(err,currentMeisterschaft){
+			Meisterschaft.findOne({jahr:'2019'}, function(err,currentMeisterschaft){
 				if(err){
 					// eslint-disable-next-line no-console 
 					console.log(err);
