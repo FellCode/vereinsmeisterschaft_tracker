@@ -94,7 +94,6 @@ form{
 }
 .tabcontent2{
     border:2px solid rgba(211,211,211,.2);
-    border-radius: 15px;
     padding: 15px;
     background-color: rgba(211,211,211,.2);
     margin-bottom: 20px;
@@ -110,7 +109,11 @@ tr:hover{
 
 .ui.dividing.header{
     color:white;
+    border:none;
 }
+
+
+
 
 body{
 background: #485563;  /* fallback for old browsers */
@@ -141,4 +144,3 @@ background-attachment:fixed;
 .ui.divided.items > .item{
     border-top: 1px solid rgb(31,122,31,.2);
 }
-
