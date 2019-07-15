@@ -17,7 +17,7 @@
     "express": "^4.16.3",
     "express-router": "0.0.1",
     "express-session": "^1.15.6",
-    "heroku": "^7.25.0",
+    "heroku": "^7.26.2",
     "method-override": "^2.3.10",
     "moment": "^2.21.0",
     "momentjs": "^2.0.0",
