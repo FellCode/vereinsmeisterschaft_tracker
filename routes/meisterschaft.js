@@ -2,6 +2,12 @@ var express = require('express');
 var router = express.Router();
 var Meisterschaft = require('../models/meisterschaft');
 var middleware = require('../middleware');
+var csv_export=require('csv-export');
+var fs = require('fs');
+var Iconv     = require("iconv").Iconv;
+var iconv     = new Iconv('utf8', 'utf16le');
+var csvCreator = require('../csvCreator.js')
+
 
 
 router.get('/',middleware.isLoggedIn, function(req, res) {
@@ -15,6 +21,25 @@ router.get('/',middleware.isLoggedIn, function(req, res) {
 		}
 	});
 });
+
+
+
+router.get('/csv',middleware.isLoggedIn,function(req,res){
+	Meisterschaft.findOne({}).populate('ergebnisse').exec(function(err,meisterschaft){
+		
+		if(err){
+			// eslint-disable-next-line no-console
+			console.log(err);
+		}else{
+		  let data = csvCreator.createCSV(meisterschaft.ergebnisse);
+		  res.setHeader('Content-Type',        'application/vnd.openxmlformats');
+		  res.setHeader("Content-Disposition", 'attachment; filename=Ergebnisse.xls');
+		  res.write(new Buffer([0xff, 0xfe]));
+		  res.write(iconv.convert(data));
+		  res.end();
+		}
+	});
+})
 
 
 const sortRanking = function(a,b){
@@ -40,5 +65,14 @@ const filter = function(element){
 	}
 	return false;
 }
+
+
+function createDataset(rawData,kategorie){
+	let dataset = []
+	rawData.filter(data => data.abk == kategorie).forEach(data => dataset.push({"nummer":data.nummerSchuetze,"name":data.nameSchuetze,"ringe":data.ringeSchuetze,"teiler":data.teilerSchuetze}) )
+	console.dir(dataset);
+	return dataset;
+}
+
 
 module.exports = router;

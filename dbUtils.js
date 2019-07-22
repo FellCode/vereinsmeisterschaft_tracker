@@ -13,4 +13,6 @@ function createMeisterschaft(){
 	});
 }
 
+
+
 module.exports = {createMeisterschaft:createMeisterschaft};
