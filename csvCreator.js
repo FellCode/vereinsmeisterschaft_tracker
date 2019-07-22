@@ -1,14 +1,15 @@
 const setup = [
     { abk: 'LSF', gruppen:["schueler","jugend","schuetzenklasse","altersklasse","senioren1","senioren2"] },
     { abk: 'LSA', gruppen:["schueler","jugend","schuetzenklasse","altersklasse","senioren1","senioren2"] },
-    { abk: 'LS', gruppen:["schueler","jugend","schuetzenklasse","altersklasse","senioren1","senioren2"] },
+    { abk: 'LS', gruppen:["schueler"] },
     { abk: 'KOM', gruppen:["schueler","jugend","schuetzenklasse","altersklasse","senioren1","senioren2"] },
-    { abk: 'KSA', gruppen:["schueler","jugend","schuetzenklasse","altersklasse","senioren1","senioren2"] },
+    { abk: 'KSA', gruppen:["KKOffen","altersklasse","senioren1","senioren2"] },
     { abk: 'KS', gruppen:["schueler","jugend","schuetzenklasse","altersklasse","senioren1","senioren2"] },
     { abk: 'LP',gruppen: ["schueler","jugend","schuetzenklasse","altersklasse","senioren1","senioren2"] },
-    { abk: 'SP', gruppen:["schueler","jugend","schuetzenklasse","altersklasse","senioren1","senioren2"] },
-    { abk: 'FP', gruppen:["schueler","jugend","schuetzenklasse","altersklasse","senioren1","senioren2"] },
-    { abk: 'ZS', gruppen:["schueler","jugend","schuetzenklasse","altersklasse","senioren1","senioren2"] },
+    { abk: 'LPA',gruppen: ["altersklasse","senioren1","senioren2"] },
+    { abk: 'SP', gruppen:["offen"] },
+    { abk: 'FP', gruppen:["offen"] },
+    { abk: 'ZS', gruppen:["offen"] },
 ];
 
 
@@ -32,6 +33,12 @@ function returnRange(gruppe){
 	}
 	if(gruppe == "senioren2"){
 		return [70,999]
+	}
+	if(gruppe == "offen"){
+		return [0,999]
+	}
+	if(gruppe ="KKOffen"){
+		return [0,44]
 	}
 }
 

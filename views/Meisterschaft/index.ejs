@@ -354,122 +354,6 @@
 					          	</tr>
 				           
 		      		<% }) %></tbody>
-		      </table>	
-		      <h3 class="ui dividing header">Jugend</h3>
-		      <table class="ui sortable striped selectable celled table">
-		        <thead>
-		          <tr>
-		          	<th>Position</th>
-		            <th>Nummer</th>
-		            <th>Name</th>
-		            <th>Ergebnis</th>
-		            <th>Teiler</th>
-		          </tr>
-		        </thead>
-		        <tbody>
-		        	<% meisterschaft.ergebnisse.filter(filter,{abk:"LS",minAlter:16,maxAlter:20}).sort(sortRanking).forEach(function(ergebnis,index){ %>
-					        	<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
-						          	 <td><%= index+1 %></td>
-						            <td><%=ergebnis.nummerSchuetze %></td>
-						            <td><%=ergebnis.nameSchuetze %></td>
-						            <td><%=ergebnis.ringeSchuetze %></td>
-						            <td><%=ergebnis.teilerSchuetze %></td>
-					          	</tr>
-				           
-		      		<% }) %></tbody>
-		      </table>
-		      <h3 class="ui dividing header">Schützenklasse</h3>
-		      <table class="ui sortable striped selectable celled table">
-		        <thead>
-		          <tr>
-		          	<th>Position</th>
-		            <th>Nummer</th>
-		            <th>Name</th>
-		            <th>Ergebnis</th>
-		            <th>Teiler</th>
-		          </tr>
-		        </thead>
-		        <tbody>
-		        	<% meisterschaft.ergebnisse.filter(filter,{abk:"LS",minAlter:21,maxAlter:44}).sort(sortRanking).forEach(function(ergebnis,index){ %>
-					        	<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
-						          	 <td><%= index+1 %></td>
-						            <td><%=ergebnis.nummerSchuetze %></td>
-						            <td><%=ergebnis.nameSchuetze %></td>
-						            <td><%=ergebnis.ringeSchuetze %></td>
-						            <td><%=ergebnis.teilerSchuetze %></td>
-					          	</tr>
-				           
-		      		<% }) %></tbody>
-		      </table>
-		      <h3 class="ui dividing header">Altersklasse</h3>
-		      <table class="ui sortable striped selectable celled table">
-		        <thead>
-		          <tr>
-		          	<th>Position</th>
-		            <th>Nummer</th>
-		            <th>Name</th>
-		            <th>Ergebnis</th>
-		            <th>Teiler</th>
-		          </tr>
-		        </thead>
-		        <tbody>
-		        	<% meisterschaft.ergebnisse.filter(filter,{abk:"LS",minAlter:45,maxAlter:59}).sort(sortRanking).forEach(function(ergebnis,index){ %>
-					        	<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
-						          	 <td><%= index+1 %></td>
-						            <td><%=ergebnis.nummerSchuetze %></td>
-						            <td><%=ergebnis.nameSchuetze %></td>
-						            <td><%=ergebnis.ringeSchuetze %></td>
-						            <td><%=ergebnis.teilerSchuetze %></td>
-					          	</tr>
-				           
-		      		<% }) %></tbody>
-		      </table>
-		      <h3 class="ui dividing header">Senioren I</h3>
-		      <table class="ui sortable striped selectable celled table">
-		        <thead>
-		          <tr>
-		          	<th>Position</th>
-		            <th>Nummer</th>
-		            <th>Name</th>
-		            <th>Ergebnis</th>
-		            <th>Teiler</th>
-		          </tr>
-		        </thead>
-		        <tbody>
-		        	<% meisterschaft.ergebnisse.filter(filter,{abk:"LS",minAlter:60,maxAlter:69}).sort(sortRanking).forEach(function(ergebnis,index){ %>
-					        	<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
-						          	 <td><%= index+1 %></td>
-						            <td><%=ergebnis.nummerSchuetze %></td>
-						            <td><%=ergebnis.nameSchuetze %></td>
-						            <td><%=ergebnis.ringeSchuetze %></td>
-						            <td><%=ergebnis.teilerSchuetze %></td>
-					          	</tr>
-				           
-		      		<% }) %></tbody>
-		      </table>
-		      <h3 class="ui dividing header">Senioren II</h3>
-		      <table class="ui sortable striped selectable celled table">
-		        <thead>
-		          <tr>
-		          	<th>Position</th>
-		            <th>Nummer</th>
-		            <th>Name</th>
-		            <th>Ergebnis</th>
-		            <th>Teiler</th>
-		          </tr>
-		        </thead>
-		        <tbody>
-		        	<% meisterschaft.ergebnisse.filter(filter,{abk:"LS",minAlter:70,maxAlter:999}).sort(sortRanking).forEach(function(ergebnis,index){ %>
-					        	<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
-						          	 <td><%= index+1 %></td>
-						            <td><%=ergebnis.nummerSchuetze %></td>
-						            <td><%=ergebnis.nameSchuetze %></td>
-						            <td><%=ergebnis.ringeSchuetze %></td>
-						            <td><%=ergebnis.teilerSchuetze %></td>
-					          	</tr>
-				           
-		      		<% }) %>
-		      	</tbody>
 		      </table>
 			</div>
 	    </div>
@@ -626,31 +510,7 @@
 			</div>
 			<div id="KKstehendAufgelegt" class="tabcontent2">
 				<h2 class="ui dividing header">KK Stehend Aufgelegt</h2>
-		    	<h3 class="ui dividing header">Schüler</h3>
-		        <table class="ui sortable striped selectable celled table">
-		        <thead>
-		          <tr>
-		          	<th>Position</th>
-		            <th>Nummer</th>
-		            <th>Name</th>
-		            <th>Ergebnis</th>
-		            <th>Teiler</th>
-		          </tr>
-		        </thead>
-		        <tbody>
-		        	<% meisterschaft.ergebnisse.filter(filter,{abk:"KSA",minAlter:0,maxAlter:15}).sort(sortRanking).forEach(function(ergebnis,index){ %>
-					        	<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
-						          	 <td><%= index+1 %></td>
-						            <td><%=ergebnis.nummerSchuetze %></td>
-						            <td><%=ergebnis.nameSchuetze %></td>
-						            <td><%=ergebnis.ringeSchuetze %></td>
-						            <td><%=ergebnis.teilerSchuetze %></td>
-					          	</tr>
-				          
-		      		<% }) %>
-		       </tbody>
-		      </table>	
-		      <h3 class="ui dividing header">Jugend</h3>
+		      <h3 class="ui dividing header">Offene Klasse</h3>
 		      <table class="ui sortable striped selectable celled table">
 		        <thead>
 		          <tr>
@@ -662,30 +522,7 @@
 		          </tr>
 		        </thead>
 		        <tbody>
-		        	<% meisterschaft.ergebnisse.filter(filter,{abk:"KSA",minAlter:16,maxAlter:20}).sort(sortRanking).forEach(function(ergebnis,index){ %>
-					        	<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
-						          	 <td><%= index+1 %></td>
-						            <td><%=ergebnis.nummerSchuetze %></td>
-						            <td><%=ergebnis.nameSchuetze %></td>
-						            <td><%=ergebnis.ringeSchuetze %></td>
-						            <td><%=ergebnis.teilerSchuetze %></td>
-					          	</tr>
-				           
-		      		<% }) %></tbody>
-		      </table>
-		      <h3 class="ui dividing header">Schützenklasse</h3>
-		      <table class="ui sortable striped selectable celled table">
-		        <thead>
-		          <tr>
-		          	<th>Position</th>
-		            <th>Nummer</th>
-		            <th>Name</th>
-		            <th>Ergebnis</th>
-		            <th>Teiler</th>
-		          </tr>
-		        </thead>
-		        <tbody>
-		        	<% meisterschaft.ergebnisse.filter(filter,{abk:"KSA",minAlter:21,maxAlter:44}).sort(sortRanking).forEach(function(ergebnis,index){ %>
+		        	<% meisterschaft.ergebnisse.filter(filter,{abk:"KSA",minAlter:0,maxAlter:44}).sort(sortRanking).forEach(function(ergebnis,index){ %>
 					        	<tr class='clickable-row' data-href='/result/<%=ergebnis._id%>/edit'>
 						          	 <td><%= index+1 %></td>
 						            <td><%=ergebnis.nummerSchuetze %></td>
