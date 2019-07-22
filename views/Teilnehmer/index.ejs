@@ -4,7 +4,7 @@
         <h1 class="ui dividing header">Teilnehmer</h1>
         <div class="ui segment inverted ">
             <div class="ui divided link items">
-                <% teilnehmer.forEach(function(teilnehmer){ %>
+                <% teilnehmer.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)).forEach(function(teilnehmer){ %>
                       <a class="item" href="/teilnehmer/<%=teilnehmer._id%>/edit">
                         <div class="ui tiny image">
                           <img class="avatar" src="https://ui-avatars.com/api/?size=200&color=1f7a1f&background=ffffff&name=<%=teilnehmer.name%>"
