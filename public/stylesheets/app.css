@@ -123,7 +123,7 @@ background: linear-gradient(to bottom, #29323c, #485563); /* W3C, IE 10+/ Edge, 
 background-attachment:fixed;
 }
 
-.ui.sortable.striped.selectable.celled.table  th{
+.ui.single.line.selectable.table th{
     color:green;
 }
 
