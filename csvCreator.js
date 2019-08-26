@@ -85,13 +85,13 @@ function MapDisciplinNames(abk){
 	if(abk=== 'LSA')
 		return 'Luftgewehr Stehend Aufgelegt';
 	if(abk=== 'LS')
-		return 'Luftgewehr Sitzend';
+		return 'Lasergewehr Sitzend';
 	if(abk=== 'KOM')
 		return 'Olympisch Match';
 	if(abk=== 'KSA')
 		return 'Kleinkaliber Stehend Aufgelegt';
 	if(abk=== 'KS')
-		return 'Kleinkaliber Sitzend';
+		return 'Kleinkaliber Freihand';
 	if(abk=== 'LSF')
 		return 'Luftgewehr Stehend Freihand';
 	if(abk=== 'ZS')

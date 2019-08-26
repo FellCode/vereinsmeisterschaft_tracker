@@ -1,0 +1,18 @@
+{
+ "builds":[
+      {
+         "src":"app.js",
+         "use":"@now/node",
+         "config":{
+            "helpers":"false"
+         }
+      }
+   ],
+  "build": {
+    "env": {
+      "DB_USER":"vereinsmeisterschaft",
+      "DB_PASS":"Bonjovi3",
+      "DB_NAME":"Vereinsmeisterschaft"
+    }
+  }
+}

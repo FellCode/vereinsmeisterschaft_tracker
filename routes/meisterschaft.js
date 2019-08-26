@@ -4,8 +4,7 @@ var Meisterschaft = require('../models/meisterschaft');
 var middleware = require('../middleware');
 var csv_export=require('csv-export');
 var fs = require('fs');
-var Iconv     = require("iconv").Iconv;
-var iconv     = new Iconv('utf8', 'utf16le');
+var iconv     = require("iconv-lite");
 var csvCreator = require('../csvCreator.js')
 
 
@@ -35,7 +34,7 @@ router.get('/csv',middleware.isLoggedIn,function(req,res){
 		  res.setHeader('Content-Type',        'application/vnd.openxmlformats');
 		  res.setHeader("Content-Disposition", 'attachment; filename=Ergebnisse.xls');
 		  res.write(new Buffer([0xff, 0xfe]));
-		  res.write(iconv.convert(data));
+		  res.write(iconv.encode(data,'utf16le'));
 		  res.end();
 		}
 	});
