@@ -40,6 +40,11 @@ router.get('/csv',middleware.isLoggedIn,function(req,res){
 	});
 })
 
+router.get("/logout", function(req, res) {
+    req.logout();
+    res.redirect("/login");
+});
+
 
 const sortRanking = function(a,b){
 		if (a.ringeSchuetze < b.ringeSchuetze) {
