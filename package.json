@@ -27,7 +27,7 @@
       "method-override": "^2.3.10",
       "moment": "^2.21.0",
       "momentjs": "^2.0.0",
-      "mongoose": "^5.0.10",
+      "mongoose": "^5.7.5",
       "nodemon": "^1.17.2",
       "npm": "^6.10.0",
       "passport": "^0.4.0",
